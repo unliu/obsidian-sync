@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"type":"file","file":"draft/最近的一些触动.md","id":"c3a1c1dfbffc8ebc","x":-83,"y":129,"width":363,"height":231},
+		{"type":"text","text":"最终得到这篇文章","id":"f98cce36ced6ffe0","x":-60,"y":-30,"width":250,"height":60},
+		{"type":"text","text":"但我就是写了","id":"fe79d2276fd3a533","x":-170,"y":-280,"width":250,"height":60},
+		{"type":"text","text":"不知道会有什么效果\n我可以换行\n我可以接着写下去","id":"fd5d5fc5f2bc2238","x":-560,"y":-170,"width":250,"height":200},
+		{"id":"2105646e8f479802","x":20,"y":-170,"width":260,"height":70,"type":"text","text":"https://www.bilibili.com/video/BV1BG411i7iy/?vd_source=297e42157122c8454e880da245a01cc4"},
+		{"type":"text","text":"也许这就是传说中的卡片笔记吧","id":"b602302a1bfd29bc","x":-560,"y":129,"width":250,"height":60}
+	],
+	"edges":[
+		{"id":"623cbd300025e173","fromNode":"f98cce36ced6ffe0","fromSide":"bottom","toNode":"c3a1c1dfbffc8ebc","toSide":"top"}
+	]
+}
