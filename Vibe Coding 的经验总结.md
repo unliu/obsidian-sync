@@ -51,7 +51,11 @@
 有哪些地方呢？
 - `~/.claude/CLAUDE.md` 整个电脑的全局规则。
 -  `项目根目录/CLAUDE.md`  项目的全局规则。
-	- 这里面会索引「必读文档」：
+- `项目根目录/docs/` 存储项目的各种 markdown 文档， 建议单独建一个文档的 repo（如 foobar_docs），避免日常工作文档和项目部署混杂在一起。这个目录可以用 Obsidian 管理，使用 git 插件更新。
+
+
+`项目根目录/CLAUDE.md`里会索引「必读文档」：
+
 ```markdown
 **必读文档**（按优先级）：
 1. **`/Users/watchelephant/www/jmt/docs/跨端开发最佳实践.md`** - 日常开发必须遵守的规范
