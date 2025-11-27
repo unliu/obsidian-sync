@@ -3,6 +3,48 @@
 ## 概览
 我主要用 Claude Code 结合镜像的 Sonnet 4.5 + Opus 4.5，偶尔用 GLM 4.6/Kimi K2 同时也会用 Gemini Thinking 快速处理一些小任务。
 
+## 节奏感
+要有好的节奏感，需要：
+- 提升效率——使用语音输入法（豆包）
+- 减少等待——建立并发
+- 减少卡壳——终端用 warp，不用搜命令
+- 实时提醒——善用 Claude Code hooks
+
+我的 `~/.claude/settings.json`
+```json
+{
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Submarine.aiff;terminal-notifier -message '需要您的输入确认...' -title 'Claude Code' -sender com.apple.Terminal"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Funk.aiff;terminal-notifier -message 'Claude Code 任务完成' -title 'Claude Code' -sender com.apple.Terminal"
+          }
+        ]
+      }
+    ]
+  },
+  "editor": {
+    "autoApply": false,
+    "confirmBeforeEdit": true
+  },
+  "model": "opus"
+}
+
+```
+
+
 
 ## 上下文
 上下文基本上是有「各地的」`CLAUDE.md` ，配合其它 markdown 文档来实现。
@@ -46,46 +88,6 @@
 
 随着开发的进行，`CLAUDE.md` 里记的东西会越来越多，其实就跟人类平时的笔记一样，不必强求结构化和干净，但也注意定时整理、避免上下文过长就好。
 
-## 节奏感
-要有好的节奏感，需要：
-- 提升效率——使用语音输入法（豆包）
-- 减少等待——建立并发
-- 减少卡壳——终端用 warp，不用搜命令
-- 实时提醒——善用 Claude Code hooks
-
-我的 `~/.claude/settings.json`
-```json
-{
-  "hooks": {
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "afplay /System/Library/Sounds/Submarine.aiff;terminal-notifier -message '需要您的输入确认...' -title 'Claude Code' -sender com.apple.Terminal"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "afplay /System/Library/Sounds/Funk.aiff;terminal-notifier -message 'Claude Code 任务完成' -title 'Claude Code' -sender com.apple.Terminal"
-          }
-        ]
-      }
-    ]
-  },
-  "editor": {
-    "autoApply": false,
-    "confirmBeforeEdit": true
-  },
-  "model": "opus"
-}
-
-```
 
 ## 模型接力
 模型经常需要换来换去，我是用 shell 脚本解决模型环境切换的问题。
